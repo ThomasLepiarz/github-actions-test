@@ -1,0 +1,15 @@
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\bin\Debug\MyTestProject.exe.config
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\bin\Debug\MyTestProject.exe
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\bin\Debug\MyTestProject.pdb
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\obj\Debug\MyTestProject.csproj.AssemblyReference.cache
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\obj\Debug\MainWindow.g.cs
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\obj\Debug\App.g.cs
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\obj\Debug\MyTestProject_MarkupCompile.cache
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\obj\Debug\MyTestProject_MarkupCompile.lref
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\obj\Debug\MainWindow.baml
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\obj\Debug\MyTestProject.g.resources
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\obj\Debug\MyTestProject.Properties.Resources.resources
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\obj\Debug\MyTestProject.csproj.GenerateResource.cache
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\obj\Debug\MyTestProject.csproj.CoreCompileInputs.cache
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\obj\Debug\MyTestProject.exe
+C:\Users\tlepiarz\Desktop\TestCode\MyTestProject\MyTestProject\obj\Debug\MyTestProject.pdb
