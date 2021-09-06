@@ -1,6 +1,11 @@
 name: Actions Workflow
 
-on: [push, pull_request]
+# on: [push, pull_request] thats posted as an array, the other way is to post this as objects
+on:
+  push:
+  pull_request:
+    types: [closed, assigned, opened, reopened]
+    
 
 jobs:
   run-github-actions:
@@ -22,4 +27,4 @@ jobs:
         with:
           who-to-greet: John
       - name: Log Greeting Time
-        run: echo "${{steps.greet.outputs.time}}" #refers to the step greet. The {{}} are used for variables
+        run: echo "${{steps.greet.outputs.time}}" #refers to the step greet. The {{}} are used for variables test 
