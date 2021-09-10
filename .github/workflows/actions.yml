@@ -1,8 +1,23 @@
 name: Actions Workflow
 
-# on: [push, pull_request] thats posted as an array, the other way is to post this as objects
+# on: [push, pull_request] #thats posted as an array, the other way is to post this as objects
 on:
-  push:
+  push: 
+    branches:
+      - master #simple string
+      # - 'feature/*' # this is a pattern. matches feature/featA, feature/featB, doesn't match feature/featA/a
+      # - "feature/**" # this will also match feature/featA/a
+      # - '!feature/featC' this will NOT trigger this feature
+    # tags: 
+    #   - RC 
+    # paths:
+    #   - '**.js' 
+    #   - "!filename.js"
+  # repository_dispatch: # trigger workflows manually using repository dispatch event
+      # types: [build]
+  # push:
+  # schedule:
+    # - cron: "* * * * *" #look crontab.guru to see how you can schedule it in UTC time
   pull_request:
     types: [closed, assigned, opened, reopened]
     
@@ -11,10 +26,24 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: List Files
+      - name: List Files #pwd is a command in Linux that stand for print working directory, ls -a list all files. Option -a shows all hidden files.
         run: |
-          pwd
-          ls
+          pwd 
+          ls -a
+          git init 
+          git remote add origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git" 
+          git config --global user.email "my-bot@bot.com"
+          git config --global user.name "my-bot"
+          git fetch 
+          git checkout master
+          git branch --set-upstream-to=origin/master
+          git pull_request
+          ls -a
+          echo $RANDOM >> random.txt
+          ls -a
+          git add -A 
+          git commit -m"Random file added" 
+          git push 
       - name: Checkout
         uses: actions/checkout@v1
       - name: List Files After Checkout
