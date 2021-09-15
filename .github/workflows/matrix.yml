@@ -1,0 +1,38 @@
+  name: Matrix
+  on : push
+  
+  jobs: 
+    node-version:
+      strategy:
+        matrix:
+          os: [macos-latest, ubuntu-latest,windows-latest]
+          node_version: [6,8,10] ##this job will run three times for each version
+        # fail-fast: true ## true will stop the job if one run will fail, false will run all strategy steps independantly
+        # max-paralell: 2 #default all steps are runed parallel, set a number of jobs which should run in parallel
+          exclude: 
+            - os: ubuntu-latest
+              node-version: 6
+            - os: macos-latest
+              node-version: 6
+          include: 
+            - os: ubunti-latest
+              node_version: 8
+              is_ubuntu_8: "true"
+
+
+      runs-on: ubuntu-latest
+      env: 
+        IS_UBUNTU8: ${{matrix-is_ubuntu_8}}
+      # runs-on: ${{matrix.os}} 
+      steps: 
+        - name: Log node node-version
+          run: node -v
+        - uses: actions/setup-node@v1
+          with: 
+            node-version: 6
+            # node-version: ${{ matrix.node.version }} #using the matrix variable we created 
+        - name: Log node node-version
+          run: |
+              node -v
+              echo $IS_UBUNTU8
+
