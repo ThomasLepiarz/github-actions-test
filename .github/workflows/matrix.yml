@@ -11,9 +11,9 @@
         # max-paralell: 2 #default all steps are runed parallel, set a number of jobs which should run in parallel
           exclude: 
             - os: ubuntu-latest
-              node-version: 6
+              node_version: 6
             - os: macos-latest
-              node-version: 6
+              node_version: 6
           include: 
             - os: ubunti-latest
               node_version: 8
