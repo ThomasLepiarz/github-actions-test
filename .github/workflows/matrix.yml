@@ -22,7 +22,7 @@
 
       runs-on: ubuntu-latest
       env: 
-        IS_UBUNTU8: ${{matrix-is_ubuntu_8}}
+        IS_UBUNTU8: ${{matrix.is_ubuntu_8}}
       # runs-on: ${{matrix.os}} 
       steps: 
         - name: Log node node-version
